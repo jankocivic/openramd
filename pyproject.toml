@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openramd"
+version = "0.1.0"
+description = "Random Acceleration Molecular Dynamics (RAMD) for OpenMM in one file"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+[project.urls]
+Homepage = "https://github.com/jankocivic/openramd"
+
+[tool.setuptools]
+py-modules = ["ramd"]

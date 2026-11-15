@@ -1,0 +1,60 @@
+amber             on
+parmfile          ../system.parm7
+coordinates       ../system.pdb
+exclude           scaled1-4
+oneFourscaling        0.833333
+scnb              2.0
+
+temperature       300
+
+cellBasisVector1  85.608     0.0      0.0
+cellBasisVector2  -28.536     80.71199643175729       0.0
+cellBasisVector3  -28.536     -40.35599821587864      69.89863930006076
+cellOrigin        0.0 0.0 0.0
+
+cutoff            9.0
+switching         off
+pairlistdist      11.0
+PME               on
+PMEGridSpacing    1.0
+
+timestep          2.0
+waterModel        tip3
+rigidBonds        all
+
+langevin          on
+langevinTemp      300
+langevinDamping   1.0
+
+useGroupPressure      yes
+langevinPiston        on
+langevinPistonTarget  1.0 
+langevinPistonPeriod  200.0
+langevinPistonDecay   100.0
+langevinPistonTemp    300
+
+outputName        ramd_run1
+outputEnergies    10000
+dcdfreq           10000  
+restartfreq       10000
+xstFreq           10000
+outputTiming      10000 
+
+# ---------------- RAMD ----------------
+source            ramd-5.tcl       
+
+ramd firstProtAtom    973
+ramd lastProtAtom     973         
+ramd firstRamdAtom    48601      
+ramd lastRamdAtom     48602     
+ramd ramdfilename     ramd_run1.log
+
+ramd forceRAMD        2        
+ramd ramdSteps        50      
+ramd rMinRamd         0.1    
+ramd forceOutFreq     50    
+ramd maxDist          30.0 
+ramd namdVersion      3.0
+ramd debugLevel       0
+
+run               10000000          
