@@ -11,6 +11,8 @@ For more details on the technique and algorithm we suggest reading the original 
 Another similar python package already exists [openmm_ramd](https://github.com/seekrcentral/openmm_ramd) and it served as inspiration for this plugin, but here the whole package is condensed into one relatively short file without loss of any functionality.
 In our opinion this makes it easier to maintain and use.
 
+https://github.com/user-attachments/assets/3936fdce-4ca1-48ec-a141-3d3d5eda3300
+
 ## Installation
 
 openramd needs [OpenMM](https://openmm.org), which it does not install for you.
